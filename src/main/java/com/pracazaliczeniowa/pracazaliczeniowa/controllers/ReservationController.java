@@ -1,7 +1,7 @@
 package com.pracazaliczeniowa.pracazaliczeniowa.controllers;
 
 import com.pracazaliczeniowa.pracazaliczeniowa.model.Reservation;
-import com.pracazaliczeniowa.pracazaliczeniowa.repositories.ReservationRepository;
+import com.pracazaliczeniowa.pracazaliczeniowa.repositores.ReservationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

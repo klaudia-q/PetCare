@@ -1,4 +1,4 @@
-package com.pracazaliczeniowa.pracazaliczeniowa.repositories;
+package com.pracazaliczeniowa.pracazaliczeniowa.repositores;
 
 import com.pracazaliczeniowa.pracazaliczeniowa.model.Reservation;
 import org.springframework.data.jpa.repository.JpaRepository;
