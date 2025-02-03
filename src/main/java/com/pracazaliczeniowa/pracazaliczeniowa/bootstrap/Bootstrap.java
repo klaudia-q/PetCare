@@ -52,31 +52,33 @@ public class Bootstrap implements CommandLineRunner {
         Animal animal2saved=animalRepository.save(animal2);
 
         savedClient.setZwierzeta(Arrays.asList(animal1saved,animal2saved));
+        clientRepository.save(savedClient);
 
         Client client2= new Client();
         client2.setEmail("ww@wp.pl");
         client2.setImie("Weronika");
         client2.setNazwisko("Wolska");
-        Client savedClient2=clientRepository.save(client);
+        Client savedClient2=clientRepository.save(client2);
 
         Animal animal12=new Animal();
         animal12.setImie("Figut");
         animal12.setGatunek("pies");
         animal12.setRasa("kundelek");
         animal12.setWiek(3);
-        animal12.setKlient(savedClient);
+        animal12.setKlient(savedClient2);
 
         Animal animal22=new Animal();
         animal22.setImie("Klarut");
         animal22.setGatunek("kot");
         animal22.setRasa("dachowiec");
         animal22.setWiek(1);
-        animal22.setKlient(savedClient);
+        animal22.setKlient(savedClient2);
 
         Animal animal12saved=animalRepository.save(animal12);
         Animal animal22saved=animalRepository.save(animal22);
 
         savedClient2.setZwierzeta(Arrays.asList(animal12saved,animal22saved));
+        clientRepository.save(savedClient2);
 
     }
 }

@@ -2,6 +2,7 @@ package com.pracazaliczeniowa.pracazaliczeniowa.repositores;
 
 import com.pracazaliczeniowa.pracazaliczeniowa.model.Animal;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.NativeQuery;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
@@ -16,6 +17,6 @@ public interface AnimalRepository extends JpaRepository<Animal, Long> {
     Set<Animal> findOtherAnimalsWithSameOwner(@Param("animalId") Long animalId);
 
     // Native Query: Pobiera zwierzęta po clientId
-    @Query(value = "SELECT * FROM animal a WHERE a.client_id = :clientId", nativeQuery = true)
+    @NativeQuery(value = "SELECT * FROM animal a WHERE a.client_id = :clientId")
     Set<Animal> getAnimalsByClientNative(@Param("clientId") Long clientId);
 }

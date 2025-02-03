@@ -53,7 +53,7 @@ public class AnimalController {
 
     @GetMapping(GET_CLIENT_ANIMALS_PATH)
     public Set<AnimalDTO> getAnimalsByClient(@PathVariable("clientId") Long clientId) {
-        return animalService.findOtherAnimalsWithSameOwner(clientId);
+        return animalService.getAnimalsByClient(clientId);
     }
 
 }
