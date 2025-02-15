@@ -21,3 +21,10 @@ public class Animal {
 
     // Gettery, settery, konstruktor
 }
+
+public class AnimalStay {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
+
+}
