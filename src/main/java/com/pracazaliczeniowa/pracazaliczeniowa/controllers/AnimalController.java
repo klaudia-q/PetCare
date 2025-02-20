@@ -2,6 +2,11 @@ package com.pracazaliczeniowa.pracazaliczeniowa.controllers;
 
 import com.pracazaliczeniowa.pracazaliczeniowa.model.DTO.AnimalDTO;
 import com.pracazaliczeniowa.pracazaliczeniowa.services.AnimalService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Set;
 
 @RestController
+@Tag(name = "Animals", description = "API for managing animals")
 @RequiredArgsConstructor
 public class AnimalController {
 
@@ -21,6 +27,16 @@ public class AnimalController {
 
     private final AnimalService animalService;
 
+
+    @Operation(
+            summary = "Get crop by ID",
+            description = "Retrieve details of a specific crop",
+            responses = {
+                    @ApiResponse(responseCode = "200", description = "",
+                            content = @Content(schema = @Schema(implementation = AnimalDTO.class))),
+                    @ApiResponse(responseCode = "404", description = "")
+            }
+    )
     @GetMapping(PATH_ID)
     public AnimalDTO getAnimalById(@PathVariable("animalId") Long animalId) {
         return animalService.getAnimalById(animalId);

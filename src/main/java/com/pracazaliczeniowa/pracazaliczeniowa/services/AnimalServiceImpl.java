@@ -4,6 +4,7 @@ import com.pracazaliczeniowa.pracazaliczeniowa.model.Animal;
 import com.pracazaliczeniowa.pracazaliczeniowa.model.Client;
 import com.pracazaliczeniowa.pracazaliczeniowa.model.DTO.AnimalDTO;
 import com.pracazaliczeniowa.pracazaliczeniowa.model.Mapper.AnimalEntityToDtoMapper;
+
 import com.pracazaliczeniowa.pracazaliczeniowa.repositores.ClientRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;

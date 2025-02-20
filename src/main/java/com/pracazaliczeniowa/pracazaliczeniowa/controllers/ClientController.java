@@ -8,22 +8,24 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/client")
-public class OrderController {
+//@RequestMapping("/api/client")
+public class ClientController {
 
     @Autowired
     private ClientServiceImpl clientService;
 
     // Endpoint 1: Pobierz wszystkich klientów
-    @GetMapping
+    @GetMapping(path ="/api/client/ALL ")
     public List<Client> getAllClients() {
         return clientService.getAllClients();
     }
 
-    // Endpoint 2: Dodaj nowego klienta
-    @PostMapping
-    public Client createClient(@RequestBody Client client) {
-        return clientService.createClient(client);
+    @GetMapping(path ="/api/client/{clientId}/visitsCount" )
+    public Long getAllClients(@PathVariable Long clientId) {
+        return clientService.getClientCount();
     }
+
+
+    // Endpoint 2: Dodaj nowego klienta
 }
 
