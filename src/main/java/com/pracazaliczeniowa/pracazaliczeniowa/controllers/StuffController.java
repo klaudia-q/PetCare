@@ -1,7 +1,8 @@
 package com.pracazaliczeniowa.pracazaliczeniowa.controllers;
 
 import com.pracazaliczeniowa.pracazaliczeniowa.model.Stuff;
-import com.pracazaliczeniowa.pracazaliczeniowa.repositories.StuffRepository;
+
+import com.pracazaliczeniowa.pracazaliczeniowa.repositores.StuffRepository;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;

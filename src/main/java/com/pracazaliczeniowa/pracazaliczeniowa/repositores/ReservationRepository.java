@@ -20,8 +20,6 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
     List<Reservation> findAllReservationsNative();
 
 //Pobieranie rezerwacji dla klienta
-    @Query("SELECT r FROM Reservation r WHERE r.client.id = :clientId")
-    List<Reservation> findReservationsByClient(@Param("clientId") Long clientId);
 
     @NativeQuery (value = "SELECT * FROM Reservation WHERE client_id = :clientId")
     List<Reservation> findReservationsByClientNative(@Param("clientId") Long clientId);

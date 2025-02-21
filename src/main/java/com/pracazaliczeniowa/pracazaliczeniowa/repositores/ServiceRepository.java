@@ -1,4 +1,4 @@
-package com.pracazaliczeniowa.pracazaliczeniowa.repositories;
+package com.pracazaliczeniowa.pracazaliczeniowa.repositores;
 
 import com.pracazaliczeniowa.pracazaliczeniowa.model.Service;
 import jakarta.transaction.Transactional;
